@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+
+:root {
+    --background-main: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);;
+    --background-form: rgb(255, 255, 255);
+    --font-main-color: rgb(133, 133, 133);
+    --font-main-size: 1rem;
+    --border-input: 1px solid rgb(196, 196, 196);
+    --border-radius: 0.5rem;
+    --padding: 20px;
+    --padding-form: 5px 15px 5px 15px;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+html{
+    height: 95%;
+}
+body {
+    background: var(--background-main);
+    height: 100%;
+    color: var(--font-main-color);
+    font-family: 'Blinker', sans-serif;
+    font-size: --font-main-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background: var(--background-form);
+    width: 25%;
+    padding: var(--padding);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+select, input {
+    border-radius: var(--border-radius);
+    padding: var(--padding-form);
+    font-size: var(--font-main-size);
+    border: var(--border-input);
+    color: var(--font-main-color);
+}
+select option {
+    border: var(--border-radius);
+}
+label {
+    padding-top: var(--padding);
+}
+.button {
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    background: rgb(182, 47, 255);
+    color: white;
+    cursor: pointer;
+}
+
+input:focus, select:focus {
+    outline: none;
+}

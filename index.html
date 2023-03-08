@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="form-container">
+    <h2>My form</h2>
+    <form action="">
+      <!-- email -->
+      <label for="mail">Email:</label>
+      <input type="email" name="mail" id="mail" placeholder="example: user@mail.com" required>
+      <!-- Country -->
+      <label for="">Country:</label>
+      <select name="country" id="country">
+        <option value="mx">Mexico</option>
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+      </select>
+      <!-- Zip code -->
+      <label for="zip">ZIP code:</label>
+      <input id="zip" name="zip" type="text" pattern="[0-9]*">
+      <!-- pass -->
+      <label for="pass">Password:</label>
+      <input type="password" name="pass" id="pass">
+      <label for="pass_confirmation">Password confirmation:</label>
+      <input type="password" name="pass_confirmation" id="pass_confirmation">
+      <!-- button -->
+      <input type="submit" class="button" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
