@@ -5,32 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <script src="./validation.js" defer></script>
   <title>Document</title>
 </head>
 <body>
   <div class="form-container">
     <h2>My form</h2>
-    <form action="">
+    <form id="form">
       <!-- email -->
       <label for="mail">Email:</label>
-      <input type="email" name="mail" id="mail" placeholder="example: user@mail.com" required>
+      <input type="email" name="mail" id="mail" class="mail" placeholder="example: user@mail.com" required>
+      <div class="error error-mail"></div>
       <!-- Country -->
-      <label for="">Country:</label>
-      <select name="country" id="country">
-        <option value="mx">Mexico</option>
-        <option value="us">United States</option>
-        <option value="ca">Canada</option>
-      </select>
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country" class="" placeholder="example: Mexico" required>
+      <span class="error error-country"></span>
       <!-- Zip code -->
       <label for="zip">ZIP code:</label>
-      <input id="zip" name="zip" type="text" pattern="[0-9]*">
+      <input id="zip" name="zip" type="text" pattern="[0-9]*" placeholder="example: 44568">
+      <div class="error error-zip"></div>
       <!-- pass -->
       <label for="pass">Password:</label>
-      <input type="password" name="pass" id="pass">
-      <label for="pass_confirmation">Password confirmation:</label>
-      <input type="password" name="pass_confirmation" id="pass_confirmation">
+      <input type="password" name="pass" id="pass" required>
+      <div class="error error-pass"></div>
+      <label for="pass-confirmation">Password confirmation:</label>
+      <input type="password" name="pass-confirmation" id="pass-confirmation" required>
+      <div class="error error-pass-confirmation"></div>
       <!-- button -->
-      <input type="submit" class="button" value="Submit">
+      <input type="submit" class="button" value="Submit" id="btn-submit">
     </form>
   </div>
 </body>

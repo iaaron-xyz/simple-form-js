@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-select, input {
+select, input, button {
     border-radius: var(--border-radius);
     padding: var(--padding-form);
     font-size: var(--font-main-size);
@@ -59,6 +59,21 @@ label {
     cursor: pointer;
 }
 
+/* General style validation */
 input:focus, select:focus {
     outline: none;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+.invalid:focus:invalid {
+    outline: 2px solid red;
+}
+.valid:focus:valid {
+    outline: 2px solid green;
+}
+/* Pass style validation */
+.invalid-pass:focus {
+    outline: 2px solid red;
 }
