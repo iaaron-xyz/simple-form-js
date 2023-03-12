@@ -1,11 +1,9 @@
 // form elements
-const form = document.getElementById('form');
-const btnSubmit = document.getElementById('btnSubmit');
 const email = document.getElementById('mail');
 const pass = document.getElementById('pass');
+const passConfirmation = document.getElementById('pass-confirmation');
 // Error elements
 const errorEmail = document.querySelector('.error-mail');
-const errorCountry = document.querySelector('.error-country');
 const errorPass = document.querySelector('.error-pass');
 const errorPassConf = document.querySelector('.error-pass-confirmation');
 // inputs
@@ -55,6 +53,20 @@ function validatePassLength(e) {
     console.log(e.target.classList);
   }
 }
+// validate pass and pass-confirmation match
+function validatePasswordsMatch() {
+  console.log("confirmation: ", passConfirmation.value);
+  console.log("original: ", pass.value);
+  if (pass.value !== passConfirmation.value) {
+    passConfirmation.classList.add('invalid-pass');
+    passConfirmation.classList.remove('valid');
+    errorPassConf.innerHTML = 'Passwords does not MATCH';
+  } else {
+    passConfirmation.classList.remove('invalid-pass');
+    passConfirmation.classList.add('valid');
+    errorPassConf.innerHTML = '';
+  }
+}
 
 // General checks
 inputs.forEach(input => {
@@ -65,3 +77,5 @@ inputs.forEach(input => {
 email.addEventListener('input', validateMyEmail);
 // pass
 pass.addEventListener('input', validatePassLength);
+// pass confirmation
+passConfirmation.addEventListener('input',validatePasswordsMatch);
